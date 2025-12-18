@@ -1,0 +1,52 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Bagian 1: For Loop
+    cout << "For loop output:" << endl;
+    for (int i = 0; i < 5; i++) {
+        cout << "Nilai i = " << i << " ";
+    }
+    cout << endl;
+
+    // Bagian 2: While Loop
+    cout << "While loop output:" << endl;
+    int a = 0;
+    while (a < 5) {
+        cout << "Nilai i = " << a << " ";
+        a++;
+    }
+    cout << endl;
+
+    // Bagian 3: Do-While Loop
+    cout << "Do-while loop output:" << endl;
+    int b = 0;
+    do {
+        cout << "Nilai b = " << b << " ";
+        b++;
+    } while (b < 5);
+    cout << endl;
+
+    // Bagian 4: Penggunaan Continue
+    cout << "Penggunaan continue di for loop:" << endl;
+    for (int i = 0; i < 10; i++) {
+        if (i == 5) {
+            continue; // Melewati angka 5
+        }
+        cout << "Nilai i = " << i << " ";
+    }
+    cout << endl;
+
+    // Bagian 5: Penggunaan Break
+    cout << "Penggunaan break di for loop:" << endl;
+    for (int i = 0; i < 10; i++) {
+        if (i == 5) {
+            break; // Menghentikan loop saat i mencapai 5
+        }
+        cout << "Nilai i = " << i << " ";
+    }
+    cout << endl;
+
+    cout << "Program Selesai." << endl;
+    return 0;
+}
