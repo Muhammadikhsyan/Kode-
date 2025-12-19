@@ -1,0 +1,15 @@
+#include <ncurses\curses.h>
+
+int main() {
+
+    initscr(); // init screen and sets up screen
+
+    printw("Hello World!"); // print to screen
+
+    refresh(); // refresh
+
+    getch(); // pause the screen output
+
+    endwin(); // Deallocates memory and ends ncurses
+    return 0;
+}
