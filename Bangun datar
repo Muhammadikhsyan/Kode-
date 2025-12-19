@@ -1,0 +1,75 @@
+#include <iostream>
+using namespace std;
+
+// Variabel Global
+const double PI = 3.14;
+
+// --- Deklarasi Fungsi-Fungsi Perhitungan ---
+
+double hitungLuasPersegi(double sisi) {
+    return sisi * sisi;
+}
+
+double hitungLuasPersegiPanjang(double p, double l) {
+    return p * l;
+}
+
+double hitungLuasSegitiga(double a, double t) {
+    return 0.5 * a * t;
+}
+
+double hitungLuasLingkaran(double r) {
+    return PI * r * r;
+}
+
+// --- Fungsi Utama ---
+
+int main() {
+    int pilihan;
+    
+    cout << "Menu Kalkulator Bangun Datar:" << endl;
+    cout << "1. Persegi" << endl;
+    cout << "2. Persegi Panjang" << endl;
+    cout << "3. Segitiga" << endl;
+    cout << "4. Lingkaran" << endl;
+    cout << "Masukkan pilihan bro (1-4): ";
+    cin >> pilihan;
+
+    cout << "----------------------------" << endl;
+
+    switch (pilihan) {
+        case 1: {
+            double sisi;
+            cout << "Masukkan panjang sisi persegi: ";
+            cin >> sisi;
+            cout << "Luas persegi: " << hitungLuasPersegi(sisi) << endl;
+            break;
+        }
+        case 2: {
+            double panjang, lebar;
+            cout << "Masukkan panjang: "; cin >> panjang;
+            cout << "Masukkan lebar: "; cin >> lebar;
+            cout << "Luas persegi panjang: " << hitungLuasPersegiPanjang(panjang, lebar) << endl;
+            break;
+        }
+        case 3: {
+            double alas, tinggi;
+            cout << "Masukkan alas: "; cin >> alas;
+            cout << "Masukkan tinggi: "; cin >> tinggi;
+            cout << "Luas segitiga: " << hitungLuasSegitiga(alas, tinggi) << endl;
+            break;
+        }
+        case 4: {
+            double jariJari;
+            cout << "Masukkan jari-jari: ";
+            cin >> jariJari;
+            cout << "Luas lingkaran: " << hitungLuasLingkaran(jariJari) << endl;
+            break;
+        }
+        default:
+            cout << "Pilihan tidak valid." << endl;
+            break;
+    }
+
+    return 0;
+}
